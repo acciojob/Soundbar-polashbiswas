@@ -1,14 +1,11 @@
 //your JS code here. If required.
-function playsound(sound){
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
 
-    let audio =   document.querySelector(`audio[src='${sound}']`);
-   
-    console.log(audio);
-    if(audio.paused){
-        audio.play();
-    }
-    else{
-        audio.pause();
-    }
-    
+function stop() {
+  var audio = document.getElementById("audio");
+  audio.pause();
+  audio.currentTime = 0;
 }
